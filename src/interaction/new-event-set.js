@@ -62,7 +62,7 @@ if (typeof AFRAME === 'undefined') {
   throw new Error('Component attempted to register before AFRAME was available.');
 }
 
-module.exports =  AFRAME.registerComponent('event-set', {
+module.exports =  AFRAME.registerComponent('new-event-set', {
   schema: {
     default: '',
     parse: function (value) {

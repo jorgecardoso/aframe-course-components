@@ -1,4 +1,4 @@
-# A-Frame Extras
+# A-Frame Course Components
 
 [![Latest NPM release](https://img.shields.io/npm/v/aframe-course-components.svg)](https://www.npmjs.com/package/aframe-course-components)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/jorgecardoso/aframe-course-components/master/LICENSE)

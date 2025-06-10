@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <title>A-Frame New Event Set Example</title>
+  <meta charset="utf-8">
+  <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.4.0/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component/dist/aframe-event-set-component.min.js"></script>
+  <script src="../../../dist/aframe-course.js"></script>
+</head>
+
+<body>
+  <a-scene cursor="rayOrigin: mouse">
+    <a-asset-item id="birdModel" src="../../assets/lady_bug_bird/lady_bug_bird.glb"></a-asset-item>
+    <a-sky color="lightblue"></a-sky>
+
+    <!-- Can be used together with existing event-set component -->
+    <a-box id="redbox" event-set__makeblue="_event: click; color: blue"
+      color="red" position="-0.5 1.5 -2"></a-box>
+
+      <!-- To change properties in components that have a dash in the name, we can use `new-event-set`-->
+    <a-box new-event-set__changeanim="_event: click; 
+         _target: #bird; animation-mixer.clip:Eye Roll" 
+         color="yellow" position="0.5 1.5 -2"></a-box>
+
+    <a-gltf-model id="bird" position="0.5 2.5 -2" scale="2 2 2" src="#birdModel" animation-mixer="clip: *"></a-gltf-model>
+  </a-scene>
+</body>
+
+</html>

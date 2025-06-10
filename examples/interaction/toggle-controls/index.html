@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="../../../dist/aframe-course.js"></script>
+</head>
+
+<body>
+
+
+    <a-scene stats cursor="rayOrigin:mouse">
+        <a-entity environment="preset:forest"></a-entity>
+
+
+        <a-box id="redbox" 
+            toggle-controls="events: click; onEvents: toggleon; offEvents: toggleoff;"
+            event-set__makeblue="_event: toggleon; color: blue" 
+            event-set__makegreen="_event: toggleoff; color: green"
+            color="red" position="0 1.5 -2"></a-box>
+    </a-scene>
+
+</body>
+
+</html>
