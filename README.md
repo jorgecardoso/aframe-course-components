@@ -1,17 +1,15 @@
 # A-Frame Extras
 
-[![Latest NPM release](https://img.shields.io/npm/v/aframe-extras.svg)](https://www.npmjs.com/package/aframe-extras)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/c-frame/aframe-extras/master/LICENSE)
+[![Latest NPM release](https://img.shields.io/npm/v/aframe-course-components.svg)](https://www.npmjs.com/package/aframe-course-components)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/jorgecardoso/aframe-course-components/master/LICENSE)
 
-Add-ons and helpers for A-Frame VR.
-
-Includes components for controls, model loaders, pathfinding, and more:
+Components used in the example of the A-Frame course.
 
 <!-- tree src -I index.js -->
 <pre>
 src
-├── <b>controls/</b> (<a href="/src/controls">Documentation</a>)
-│   ├── movement-controls.js
+├── <b>interaction/</b> (<a href="/src/interaction">Documentation</a>)
+│   ├── new-event-set.js
 │   ├── checkpoint-controls.js
 │   ├── gamepad-controls.js
 │   ├── keyboard-controls.js
