@@ -1,6 +1,6 @@
 {
   "name": "aframe-course-components",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Components used in the A-Frame course",
   "author": "Jorge C. S. Cardoso <jorgecardoso@ieee.org>",
   "license": "MIT",

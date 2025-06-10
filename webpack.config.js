@@ -3,7 +3,8 @@ const path = require('path');
 module.exports = {
   entry: {
     'aframe-course': './index.js',
-    'aframe-course.interaction': './src/interaction/index.js'
+    'aframe-course.interaction': './src/interaction/index.js',
+     'aframe-course.locomotion': './src/locomotion/index.js'
   },
   output: {
     libraryTarget: 'umd',
