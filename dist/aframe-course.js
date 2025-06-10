@@ -341,6 +341,58 @@ function removeEventListeners(el, eventNames, handler) {
     }
 }
 
+/***/ }),
+
+/***/ "./src/locomotion/autoportal.js":
+/*!**************************************!*\
+  !*** ./src/locomotion/autoportal.js ***!
+  \**************************************/
+/***/ ((module) => {
+
+ module.exports =  AFRAME.registerComponent('autoportal', {
+      dependencies: ['aabb-collider'],
+      schema: {
+        rig: { type: 'string', default: "#rig" },
+        debug: { type: 'boolean', default: false },
+      },
+
+      init: function () {
+        console.log("Initting Auto Portal Component")
+      },
+      update: function () {
+        this.rig = this.el.sceneEl.querySelector(this.data.rig);
+        if (!this.rig)
+          console.warn("Could not find player rig! Check 'rig' property: ", this.data.rig)
+        else {
+          this.rig.setAttribute("data-aabb-collider-dynamic");
+          let cam = rig.querySelector("[camera]") || rig.querySelector("a-camera");
+          let player = document.createElement("a-cylinder");
+          player.setAttribute('radius', '0.2');
+          player.setAttribute('height', '2');
+          player.setAttribute('visible', 'false');
+          cam.appendChild(player)
+        }
+
+        this.el.setAttribute('aabb-collider', 'objects', this.data.rig);
+        this.el.setAttribute('aabb-collider', 'debug', this.data.debug);
+        this.el.addEventListener('hitstart', function () {
+          console.log("Auto Portal hit. Openning target")
+          document.location.href = this.el.getAttribute('href');
+        }.bind(this));
+
+      }
+    });
+
+/***/ }),
+
+/***/ "./src/locomotion/index.js":
+/*!*********************************!*\
+  !*** ./src/locomotion/index.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+__webpack_require__(/*! ./autoportal */ "./src/locomotion/autoportal.js");
+
 /***/ })
 
 /******/ 	});
@@ -377,8 +429,8 @@ var __webpack_exports__ = {};
   !*** ./index.js ***!
   \******************/
 __webpack_require__(/*! ./src/interaction */ "./src/interaction/index.js");
-/*require('./src/loaders');
-require('./src/misc');
+__webpack_require__(/*! ./src/locomotion */ "./src/locomotion/index.js");
+/*require('./src/misc');
 require('./src/pathfinding');
 require('./src/primitives');
 */
