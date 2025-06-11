@@ -12,6 +12,7 @@ let playvideo = AFRAME.registerComponent('playvideo', {
     }
 
     let target = null;
+    console.log(this.el.components['videotarget']);
     if (this.el.components['videotarget'] && this.el.components['videotarget'].data) {
       target = this.el.components['videotarget'].data;
     } else { // if no videotarget is set, play on self
@@ -140,6 +141,7 @@ let videotarget = AFRAME.registerComponent('videotarget', {
   schema: { type: 'selector', default: 'a-video' },
 
   init: function () {
+    console.log("Setting videotarget", this.data);
   }
 });
 

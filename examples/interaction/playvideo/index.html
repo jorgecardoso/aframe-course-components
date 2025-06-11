@@ -2,18 +2,33 @@
   <title>Play video </title>
   <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-event-set-component/dist/aframe-event-set-component.min.js"></script>
- <script src="../../../dist/aframe-course.js"></script>
+  <script src="../../../dist/aframe-course.js"></script>
 </head>
 
 <body>
   <a-scene cursor="rayOrigin: mouse">
     <a-assets>
-      <video id="myvideo"  src="jorge.mp4">
+      <video id="v1" src="../../assets/videos/v1.mp4"></video>
+      <video id="v2" src="../../assets/videos/v2.mp4"></video>
+      <video id="v3" src="../../assets/videos/v3.mp4"></video>
+      <video id="v4" src="../../assets/videos/v4.mp4"></video>
+      <video id="v5" src="../../assets/videos/v5.mp4"></video>
+      <video id="v6" src="../../assets/videos/v6.mp4"></video>
     </a-assets>
 
-    <a-sky color="blue"></a-sky>
+    <a-sky color="lightblue"></a-sky>
 
-    <a-video id="videopanel"  color="white" position="0 1.6 -2" 
-      event-set__click="playvideo: #myvideo;"></a-video>
+
+    <a-video position="-1.5 3 -2" event-set__click="playvideo: #v1;"></a-video>
+    <a-video position="0 3 -2" event-set__click="playvideo: #v2;"></a-video>
+    <a-video position="1.5 3 -2" event-set__click="playvideo: #v3;"></a-video>
+
+    <a-video id="shared" width="3" position="0 1.5 -2"></a-video>
+    <a-box position="-1.5 0.5 -2" width="0.5" height="0.5" depth="0.1" color="red" videoset="#v4, #v5, #v6"
+      videotarget="#shared" event-set__click="stopallvideos: true; playvideo: #v4;"></a-box>
+    <a-box position="0 0.5 -2" width="0.5" height="0.5" depth="0.1" color="green" videoset="#v4, #v5, #v6"
+      videotarget="#shared" event-set__click="stopallvideos:true; playvideo: #v5;"></a-box>
+    <a-box position="1.5 0.5 -2" width="0.5" height="0.5" depth="0.1" color="blue" videoset="#v4, #v5, #v6"
+      videotarget="#shared" event-set__click="stopallvideos:true; playvideo: #v6;"></a-box>
   </a-scene>
 </body>
