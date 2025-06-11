@@ -147,7 +147,7 @@ let videotarget = AFRAME.registerComponent('videotarget', {
 
 
 let videoset = AFRAME.registerComponent('videoset', {
-  schema: { type: 'selectorAll', default: 'videos' },
+  schema: { type: 'selectorAll', default: 'video' },
 
   init: function () {
   }
