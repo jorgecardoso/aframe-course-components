@@ -8,11 +8,11 @@ Components used in the example of the A-Frame course.
 <!-- tree src -I index.js -->
 <pre>
 src
-├── <b>interaction/</b> (<a href="/src/interaction">Documentation</a>)
+├── <b>interaction/</b> (<a href="src/interaction">Documentation</a>)
 │   ├── new-event-set.js
 │   ├── toggle-controls.js
 |   └── playvideo.js 
-└── <b>locomotion</b> (<a href="/src/locomotion">Documentation</a>)
+└── <b>locomotion</b> (<a href="src/locomotion">Documentation</a>)
     └── autoportal.js 
 </pre>
 
