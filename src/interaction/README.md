@@ -53,3 +53,12 @@ The `playvideo` component is actually composed of several components:
       videotarget="#shared" event-set__click="stopallvideos:true; playvideo: #v6;"></a-box>
   </a-scene>
 ```
+
+### Parameters
+
+|Component |Parameter | Type |Default	| Description |
+|---- |--- |---- |--- |--- |
+|`playvideo`, `loopvideo` | single property | selector | 'video' | Selector for the `<video>` asset element to play/loop. |
+|`stopallvideos`, `pauseallvideos` | none |  |  | `stopallvideos` and `pauseallvideos` will inspect the current entity's `videoset` and stop/pause all videos defined in the set. | 
+|`videotarget` | single property | selector | 'a-video' | Selector for the entity where to play the video. If this component is not set, the `playvideo` / `loopvideo` will assume the current entity to play the video on.|
+| `videoset` | single property | selectorAll | 'video' | Selector for the `<video>` asset elements to make a set. |
