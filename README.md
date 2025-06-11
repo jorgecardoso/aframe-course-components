@@ -10,8 +10,10 @@ Components used in the example of the A-Frame course.
 src
 ├── <b>interaction/</b> (<a href="/src/interaction">Documentation</a>)
 │   ├── new-event-set.js
-│   └── toggle-controls.js
-
+│   ├── toggle-controls.js
+|   └── playvideo.js 
+└── <b>locomotion</b> (<a href="/src/locomotion">Documentation</a>)
+    └── autoportal.js 
 </pre>
 
 ## Usage (Scripts)
@@ -25,4 +27,4 @@ All components are automatically registered for you:
 
 A live set of usage examples can be found here:
 
-https://c-frame.github.io/aframe-extras/examples/
+https://c-fra.github.io/aframe-extras/examples/
