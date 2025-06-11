@@ -27,4 +27,4 @@ All components are automatically registered for you:
 
 A live set of usage examples can be found here:
 
-https://c-fra.github.io/aframe-extras/examples/
+https://jorgecardoso.github.io/aframe-course-components/examples/
