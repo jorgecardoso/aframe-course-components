@@ -1,0 +1,19 @@
+<head>
+  <title>Play video </title>
+  <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component/dist/aframe-event-set-component.min.js"></script>
+ <script src="../../../dist/aframe-course.js"></script>
+</head>
+
+<body>
+  <a-scene cursor="rayOrigin: mouse">
+    <a-assets>
+      <video id="myvideo"  src="jorge.mp4">
+    </a-assets>
+
+    <a-sky color="blue"></a-sky>
+
+    <a-video id="videopanel"  color="white" position="0 1.6 -2" 
+      event-set__click="playvideo: #myvideo;"></a-video>
+  </a-scene>
+</body>
